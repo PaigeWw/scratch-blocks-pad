@@ -101,9 +101,10 @@ Blockly.Colours = {
   // CSS colours: support RGBA
   "fieldShadow": "rgba(0,0,0,0.1)",
   "dropDownShadow": "rgba(0, 0, 0, .3)",
-  "numPadBackground": "#547AB2",
-  "numPadBorder": "#435F91",
-  "numPadActiveBackground": "#435F91",
+  "numPadBackground": "#FFFFFF",
+  "numPadButtonBackground": "#d2bdfd",
+  "numPadBorder": "#9c77e6",
+  "numPadActiveBackground": "#9c77e6",
   "numPadText": "#FFFFFF",
   "valueReportBackground": "#FFFFFF",
   "valueReportBorder": "#AAAAAA"

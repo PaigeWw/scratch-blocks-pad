@@ -351,6 +351,10 @@ Blockly.Toolbox.prototype.setSelectedItemFactory = function(item) {
   return function(event) {
     this.setSelectedItem(selectedItem);
     event.stopPropagation();
+    //隐藏输入控件
+    Blockly.DropDownDiv.hide();
+    Blockly.WidgetDiv.hide();
+
     Blockly.Touch.clearTouchIdentifier();
   };
 };
@@ -498,6 +502,7 @@ Blockly.Toolbox.Category.prototype.createDom = function() {
   this.item_.appendChild(this.bubble_);
   this.parentHtml_.appendChild(this.item_);
   var item = this.item_;
+  var myself = this;
   Blockly.bindEvent_(this.item_, 'click', toolbox, toolbox.setSelectedItemFactory(this));
 };
 
@@ -510,7 +515,6 @@ Blockly.Toolbox.Category.prototype.setSelected = function(selected) {
     this.item_.className = 'scratchCategoryMenuItem categorySelected';
     this.item_.style.backgroundColor = this.colour_;
 
-    console.log(this);
   } else {
     this.item_.className = 'scratchCategoryMenuItem';
     this.item_.style.backgroundColor = '';
@@ -559,7 +563,6 @@ Blockly.Toolbox.Category.prototype.getContents = function() {
  */
 Blockly.Toolbox.Category.prototype.setColour = function(node) {
   var colour = node.getAttribute('colour');
-  console.log(node);
   var secondaryColour = node.getAttribute('secondaryColour');
   if (goog.isString(colour)) {
     if (colour.match(/^#[0-9a-fA-F]{6}$/)) {
