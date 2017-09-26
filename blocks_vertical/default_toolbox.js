@@ -135,8 +135,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '</category>'+
   '<category name="事件" bg="url(./static/blocks-media/mxc-icon/bg_event_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_event_1.png)" colour="#00ceb8" secondaryColour="#059d8d">'+
       '<block type="event_whenflagclicked" id="event_whenflagclicked"></block>'+
-      '<block type="event_whenkeypressed" id="event_whenkeypressed">'+
-      '</block>'+
       '<block type="event_whenthisspriteclicked" id="event_whenthisspriteclicked"></block>'+
       '<block type="event_whenbackdropswitchesto" id="event_whenbackdropswitchesto">'+
           '<value name="BACKDROP">'+
@@ -151,6 +149,9 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
           '</value>'+
       '</block>'+
       '<block type="event_whenbroadcastreceived" id="event_whenbroadcastreceived">'+
+          '<value name="BROADCAST_OPTION">'+
+              '<shadow type="event_broadcast_menu"></shadow>'+
+          '</value>'+
       '</block>'+
       '<block type="event_broadcast" id="event_broadcast">'+
           '<value name="BROADCAST_OPTION">'+
@@ -354,11 +355,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '<block type="sensing_distanceto" id="sensing_distanceto">'+
   '<value name="DISTANCETOMENU">'+
   '<shadow type="sensing_distancetomenu"></shadow>'+
-  '</value>'+
-  '</block>'+
-  '<block type="sensing_keypressed" id="sensing_keypressed">'+
-  '<value name="KEY_OPTION">'+
-  '<shadow type="sensing_keyoptions"></shadow>'+
   '</value>'+
   '</block>'+
   '<block type="sensing_mousedown" id="sensing_mousedown"></block>'+

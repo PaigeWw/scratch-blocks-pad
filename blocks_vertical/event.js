@@ -81,9 +81,9 @@ Blockly.Blocks['event_whenbroadcastreceived'] = {
           "type": "field_dropdown",
           "name": "BROADCAST_OPTION",
           "options": [
-            ['message1', 'message1'],
-            ['message2', 'message2'],
-            ['new message', 'new message']
+            ['消息1', 'message1'],
+            ['消息2', 'message2'],
+            // ['new message', 'new message']
           ]
         }
       ],
@@ -181,7 +181,7 @@ Blockly.Blocks['event_broadcast_menu'] = {
             "options": [
               ['消息1', 'message1'],
               ['消息2', 'message2'],
-              ['new message', 'new message']
+              // ['new message', 'new message']
             ]
           }
         ],

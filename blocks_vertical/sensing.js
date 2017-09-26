@@ -284,7 +284,7 @@ Blockly.Blocks['sensing_mousedown'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "按下鼠标?",
+      "message0": "点击屏幕?",
       "category": Blockly.Categories.sensing,
       "extensions": ["colours_sensing", "output_boolean"]
     });
@@ -298,7 +298,7 @@ Blockly.Blocks['sensing_mousex'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "鼠标的 x 坐标",
+      "message0": "触点的 x 坐标",
       "category": Blockly.Categories.sensing,
       "extensions": ["colours_sensing", "output_number"]
     });
@@ -312,7 +312,7 @@ Blockly.Blocks['sensing_mousey'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "鼠标的 y 坐标",
+      "message0": "触点的 y 坐标",
       "category": Blockly.Categories.sensing,
       "extensions": ["colours_sensing", "output_number"]
     });
@@ -576,7 +576,7 @@ Blockly.Blocks['sensing_of'] = {
       "output": true,
       "category": Blockly.Categories.sensing,
       "outputShape": Blockly.OUTPUT_SHAPE_ROUND,
-      "checkboxInFlyout": true,
+      "checkboxInFlyout": false,
       "extensions": ["colours_sensing"]
     });
   }
@@ -617,13 +617,13 @@ Blockly.Blocks['sensing_currentmenu'] = {
             "type": "field_dropdown",
             "name": "CURRENTMENU",
             "options": [
-              ['年', 'YEAR'],
-              ['月', 'MONTH'],
-              ['日', 'DATE'],
-              ['星期', 'DAYOFWEEK'],
-              ['时', 'HOUR'],
-              ['分', 'MINUTE'],
-              ['秒', 'SECOND']
+              ['年', '年'],
+              ['月', '月'],
+              ['日', '日'],
+              ['星期', '星期'],
+              ['时', '时'],
+              ['分', '分'],
+              ['秒', '秒']
             ]
           }
         ],

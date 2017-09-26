@@ -120,6 +120,9 @@ Blockly.Events.VAR_DELETE = 'var_delete';
  */
 Blockly.Events.VAR_RENAME = 'var_rename';
 
+//新建message
+Blockly.Events.MSG_CREATE = 'msg_create';
+
 /**
  * Name of event that records a UI change.
  * @const
@@ -672,8 +675,8 @@ Blockly.Events.Change.prototype.run = function(forward) {
       if (field) {
         // Run the validator for any side-effects it may have.
         // The validator's opinion on validity is ignored.
-        field.callValidator(value);
-        field.setValue(value);
+          field.callValidator(value);
+          field.setValue(value);
       } else {
         console.warn("Can't set non-existant field: " + this.name);
       }
@@ -935,7 +938,6 @@ goog.inherits(Blockly.Events.VarCreate, Blockly.Events.Abstract);
  * @type {string}
  */
 Blockly.Events.VarCreate.prototype.type = Blockly.Events.VAR_CREATE;
-
 /**
  * Encode the event as JSON.
  * @return {!Object} JSON representation.
@@ -944,6 +946,38 @@ Blockly.Events.VarCreate.prototype.toJson = function() {
   var json = Blockly.Events.VarCreate.superClass_.toJson.call(this);
   json['varType'] = this.varType;
   json['varName'] = this.varName;
+
+/**
+ *
+ * @param {Blockly.VariableModel} variable The created variable.
+ *     Null for a blank event.
+ * @extends {Blockly.Events.Abstract}
+ * @constructor
+ */
+Blockly.Events.MsgCreate = function(message) {
+  if (!message) {
+    return;  // Blank event to be populated by fromJson.
+  }
+  Blockly.Events.MsgCreate.superClass_.constructor.call(this, message.block);
+  this.msgType = message.type;
+  this.msgName = message.name;
+};
+goog.inherits(Blockly.Events.MsgCreate, Blockly.Events.Abstract);
+
+/**
+ * Type of this event.
+ * @type {string}
+ */
+Blockly.Events.MsgCreate.prototype.type = Blockly.Events.MSG_CREATE;
+
+/**
+ * Encode the event as JSON.
+ * @return {!Object} JSON representation.
+ */
+Blockly.Events.MsgCreate.prototype.toJson = function() {
+  var json = Blockly.Events.MsgCreate.superClass_.toJson.call(this);
+  json['msgType'] = this.varType;
+  json['msgName'] = this.varName;
   return json;
 };
 

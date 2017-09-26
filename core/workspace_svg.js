@@ -1136,7 +1136,7 @@ Blockly.WorkspaceSvg.prototype.isDeleteArea = function(e) {
  * @private
  */
 Blockly.WorkspaceSvg.prototype.onMouseDown_ = function(e) {
-  console.log('-------------WorkspaceSvg-onMouseDown_-----------------');
+  // console.log('-------------WorkspaceSvg-onMouseDown_-----------------');
   var gesture = this.getGesture(e);
   if (gesture) {
     gesture.handleWsStart(e, this);

@@ -45,7 +45,7 @@ Blockly.Blocks['data_variable'] = {
         }
       ],
       "category": Blockly.Categories.data,
-      "checkboxInFlyout": true,
+      "checkboxInFlyout": false,
       "extensions": ["contextMenu_getVariableBlock", "colours_data", "output_string"]
     });
   }
@@ -58,7 +58,7 @@ Blockly.Blocks['data_setvariableto'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "set %1 to %2",
+      "message0": "设置 %1 为 %2",
       "args0": [
         {
           "type": "field_variable",
@@ -82,7 +82,7 @@ Blockly.Blocks['data_changevariableby'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "change %1 by %2",
+      "message0": "将 %1 增加 %2",
       "args0": [
         {
           "type": "field_variable",
@@ -165,7 +165,7 @@ Blockly.Blocks['data_listcontents'] = {
       ],
       "category": Blockly.Categories.data,
       "extensions": ["colours_data", "output_string"],
-      "checkboxInFlyout": true
+      "checkboxInFlyout": false
     });
   }
 };
@@ -471,18 +471,18 @@ Blockly.Constants.Data.CUSTOM_CONTEXT_MENU_GET_VARIABLE_MIXIN = {
         options.push(option);
       }
     } else {
-      var renameOption = {
-        text: Blockly.Msg.RENAME_VARIABLE,
-        enabled: true,
-        callback: Blockly.Constants.Data.RENAME_OPTION_CALLBACK_FACTORY(this)
-      };
+      // var renameOption = {
+      //   text: Blockly.Msg.RENAME_VARIABLE,
+      //   enabled: true,
+      //   callback: Blockly.Constants.Data.RENAME_OPTION_CALLBACK_FACTORY(this)
+      // };
       var name = this.getField('VARIABLE').text_;
       var deleteOption = {
         text: Blockly.Msg.DELETE_VARIABLE.replace('%1', name),
         enabled: true,
         callback: Blockly.Constants.Data.DELETE_OPTION_CALLBACK_FACTORY(this)
       };
-      options.push(renameOption);
+      // options.push(renameOption);
       options.push(deleteOption);
     }
   }
