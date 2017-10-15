@@ -78,7 +78,7 @@ Blockly.Blocks['event_whenbroadcastreceived'] = {
       "message0": "当接收到消息 %1",
       "args0": [
         {
-          "type": "field_dropdown",
+          "type": "input_value",
           "name": "BROADCAST_OPTION",
           "options": [
             ['消息1', 'message1'],

@@ -79,7 +79,7 @@ Blockly.ZoomControls.prototype.HEIGHT_ = 124;
  * @type {number}
  * @private
  */
-Blockly.ZoomControls.prototype.MARGIN_BETWEEN_ = 8;
+Blockly.ZoomControls.prototype.MARGIN_BETWEEN_ = 16;
 
 /**
  * Distance between zoom controls and bottom edge of workspace.
@@ -167,7 +167,7 @@ Blockly.ZoomControls.prototype.createDom = function() {
       'width': this.WIDTH_,
       'height': this.WIDTH_,
       // 'y': (this.WIDTH_ * 1)
-      'y': (this.WIDTH_ * 1) - (this.MARGIN_BETWEEN_ * 2)
+      'y': (this.WIDTH_ * 1) - (this.MARGIN_BETWEEN_)
     },
     this.svgGroup_
   );
@@ -186,7 +186,7 @@ Blockly.ZoomControls.prototype.createDom = function() {
     {
       'width': this.WIDTH_,
       'height': this.WIDTH_,
-      'y': (this.WIDTH_ * 2) - (this.MARGIN_BETWEEN_)
+      'y': (this.WIDTH_ * 2)
       // 'y': (this.WIDTH_ * 2)
     },
     this.svgGroup_
@@ -277,5 +277,6 @@ Blockly.ZoomControls.prototype.position = function() {
     this.top_ -= metrics.flyoutHeight;
   }
   this.svgGroup_.setAttribute('transform',
-      'translate(' + this.left_ + ',' + this.top_ + ')');
+      // 'translate(' + this.left_ + ',' + this.top_ + ')');
+    'translate(640,440)');
 };
