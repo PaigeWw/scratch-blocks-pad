@@ -130,7 +130,7 @@ Blockly.Msg.PROCEDURE_ALREADY_EXISTS = 'A procedure named "%1" already exists.'
 
 // Variable deletion.
 /// confirm -  Ask the user to confirm their deletion of multiple uses of a variable.
-Blockly.Msg.DELETE_VARIABLE_CONFIRMATION = 'Delete %1 uses of the "%2" variable?';
+Blockly.Msg.DELETE_VARIABLE_CONFIRMATION = '将删除 %1 个与变量 "%2" 相关的积木?';
 /// alert - Tell the user that they can't delete a variable because it's part of the definition of a function.
 Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = 'Can\'t delete the variable "%1" because it\'s part of the definition of the function "%2"';
 /// dropdown choice - Delete the currently selected variable.

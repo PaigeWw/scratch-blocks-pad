@@ -503,7 +503,7 @@ Blockly.Toolbox.Category.prototype.createDom = function() {
   this.parentHtml_.appendChild(this.item_);
   var item = this.item_;
   var myself = this;
-  Blockly.bindEvent_(this.item_, 'click', toolbox, toolbox.setSelectedItemFactory(this));
+  Blockly.bindEvent_(this.item_, 'mousedown', toolbox, toolbox.setSelectedItemFactory(this));
 };
 
 /**

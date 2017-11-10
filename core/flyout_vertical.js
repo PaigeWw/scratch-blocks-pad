@@ -78,7 +78,7 @@ Blockly.VerticalFlyout.prototype.autoClose = false;
  * The width of the flyout, if not otherwise specified.
  * @type {number}
  */
-Blockly.VerticalFlyout.prototype.DEFAULT_WIDTH = 250;
+Blockly.VerticalFlyout.prototype.DEFAULT_WIDTH = 264;
 
 /**
  * Size of a checkbox next to a variable reporter.
@@ -244,7 +244,7 @@ Blockly.VerticalFlyout.prototype.setMetrics_ = function(xyRatio) {
 /**
  * Move the flyout to the edge of the workspace.
  */
-Blockly.VerticalFlyout.prototype.position = function() {
+Blockly.VerticalFlyout.prototype.position = function(width) {
   if (!this.isVisible()) {
     return;
   }
@@ -257,7 +257,11 @@ Blockly.VerticalFlyout.prototype.position = function() {
   // This version of the flyout does not change width to fit its contents.
   // Instead it matches the width of its parent or uses a default value.
   this.width_ = this.getWidth();
-
+// this.width_ = this.getWidth();
+  // this.width_ = 'auto';
+  if(width){
+    this.width_ = (width + 30)*this.workspace_.scale;
+  }
   if (this.parentToolbox_) {
     var x = this.parentToolbox_.HtmlDiv.offsetWidth;
     var y = 0;

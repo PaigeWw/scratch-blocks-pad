@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2017-10-15 18:25:50.916000",
+		"lastupdated": "2017-10-26 17:20:05.679000",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -32,7 +32,7 @@
 	"NEW_VARIABLE_TITLE": "新建变量:",
 	"VARIABLE_ALREADY_EXISTS": "变量 '%1' 已存在.",
 	"PROCEDURE_ALREADY_EXISTS": "A procedure named '%1' already exists.",
-	"DELETE_VARIABLE_CONFIRMATION": "Delete %1 uses of the '%2' variable?",
+	"DELETE_VARIABLE_CONFIRMATION": "将删除 %1 个与变量 '%2' 相关的积木?",
 	"CANNOT_DELETE_VARIABLE_PROCEDURE": "Can't delete the variable '%1' because it's part of the definition of the function '%2'",
 	"DELETE_VARIABLE": "删除变量 '%1'",
 	"COLOUR_PICKER_HELPURL": "https://en.wikipedia.org/wiki/Color",
